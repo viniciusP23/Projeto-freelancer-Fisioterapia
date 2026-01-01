@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contatos {
+    position: relative;
+    background-color: #dcdcdc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-contatos {
+    background-color: #E6453D;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.description-contatos {
+    margin-left: 100px;
+    color: #fff;
+}
+
+.description-contatos ul {
+    list-style: none;
+}
+
+.description-contatos li {
+    margin-bottom: 50px;
+}
+
+.description-contatos p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description-contatos h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.nosconte {
+    width: 600px;
+    height: 750px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
