@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="estilo1.css">
     <title>Document</title>
 </head>
@@ -37,14 +36,14 @@
         <div class="nosconte">
             <h2 class="contatos-titulos">Entre em Contato</h2>
 
-            <form class="formulario-contato" id="formulario">
+            <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
 
                 <div class="grupo-form">
-                    <input placeholder="Nome" class="campo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome">
                 </div>
 
                 <div class="grupo-form">
-                    <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+                    <textarea class="campo-form" placeholder="Digite sua mensagem" id="mensagem"></textarea>
                 </div>
 
                 <button type="submit" class="botao-form">Enviar WhatsApp</button>
@@ -54,5 +53,24 @@
     </section>
 
 </body>
+<script>
+
+    function enviarWhats(event) {
+        event.preventDefault()
+
+        const nome = document.getElementById("nome").value
+        const mensagem = document.getElementById("mensagem").value
+        const telefone = "5514998871712"
+
+        const texto = `Olá! me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+        window.open(url, "_blank")
+    }
+
+
+</script>
 
 </html>
