@@ -1,76 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="estilo1.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo1.css">
+  <title>Document</title>
 </head>
 
 <body>
+  <section class="feedbacks">
+    <h2>O que dizem nossos clientes</h2>
 
-    <section class="contatos">
-        <div class="header-contatos">
-            <div class="description-contatos">
-                <ul>
-                    <li>
-                        <p><i class="ri-phone-line"></i> ligue para nós</p>
-                        <p>(14) 9999999999, 33442222556</p>
-                    </li>
+    <div class="feedback-grid">
+      <div class="feedback-card">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Cliente">
+        <p>"Excelente atendimento, recomendo demais!"</p>
+        <h3>Ana Souza</h3>
+        <span>Marketing</span>
+      </div>
 
-                    <li>
-                        <p><i class="ri-map-pin-line"></i> localização</p>
-                        <p>Rua farrid bassit, ou atendimendo domiciliar</p>
-                    </li>
+      <div class="feedback-card">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Cliente">
+        <p>"Excelente atendimento, recomendo demais!"</p>
+        <h3>Ana Souza</h3>
+        <span>Marketing</span>
+      </div>
 
-                    <li>
-                        <p><i class="ri-24-hours-line"></i> Horários comercial</p>
-                        <p>Seg - Dom confome horarios disponiveis.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      <div class="feedback-card">
+        <img src="https://i.pravatar.cc/150?img=32" alt="Cliente">
+        <p>"Serviço rápido e de muita qualidade."</p>
+        <h3>Pedro Henrique</h3>
+        <span>Desenvolvedor</span>
+      </div>
 
-        <div class="nosconte">
-            <h2 class="contatos-titulos">Entre em Contato</h2>
+      <div class="feedback-card">
+        <img src="https://i.pravatar.cc/150?img=45" alt="Cliente">
+        <p>"Superou minhas expectativas."</p>
+        <h3>Juliana Melo</h3>
+        <span>Fotógrafa</span>
+      </div>
 
-            <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-
-                <div class="grupo-form">
-                    <input placeholder="Nome" class="campo-form" id="nome">
-                </div>
-
-                <div class="grupo-form">
-                    <textarea class="campo-form" placeholder="Digite sua mensagem" id="mensagem"></textarea>
-                </div>
-
-                <button type="submit" class="botao-form">Enviar WhatsApp</button>
-            </form>
-        </div>
-
-    </section>
+      <div class="feedback-card">
+        <img src="https://i.pravatar.cc/150?img=18" alt="Cliente">
+        <p>"Voltarei com certeza!"</p>
+        <h3>Lucas Almeida</h3>
+        <span>Empresário</span>
+      </div>
+    </div>
+  </section>
 
 </body>
-<script>
-
-    function enviarWhats(event) {
-        event.preventDefault()
-
-        const nome = document.getElementById("nome").value
-        const mensagem = document.getElementById("mensagem").value
-        const telefone = "5514998871712"
-
-        const texto = `Olá! me chamo ${nome}, ${mensagem}`
-        const msgFormatada = encodeURIComponent(texto)
-
-        const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-        window.open(url, "_blank")
-    }
-
-
-</script>
 
 </html>
