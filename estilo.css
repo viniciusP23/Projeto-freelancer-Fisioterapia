@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color: #28bf96;
-    --primary-color-dark: #209667;
+    --primary-color: #094b61;
+    --primary-color-dark: #0b3442;
     --text-dark: #111827;
     --text-light: #6b7280;
     --white: #fff;
@@ -415,9 +415,9 @@ nav {
 }
 
 .feedback-card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  width: 100%;
+  height: 200px;
+  /* border-radius: 50%; */
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -436,6 +436,49 @@ nav {
 .feedback-card span {
   font-size: 0.85rem;
   color: #888;
+}
+
+/* modal */
+
+.modal-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-img img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
 }
 
 
@@ -616,7 +659,7 @@ nav {
 }
 
 .header-contatos {
-    background-color: #28bf96;
+    background-color: #094b61;
     height: 60%;
     width: 100%;
     display: flex;
@@ -667,12 +710,11 @@ nav {
 
 /*  */
 
-
 .contatos-titulos {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #114e3e;
+    color: #094b61;
 }
 
 .formulario-contato {
@@ -706,7 +748,7 @@ nav {
 
 .botao-form {
     color: #fff;
-    background-color: #28bf96;
+    background-color: #094b61;
     padding: 1rem 2rem;
     border: 1px solid #fff;
     border-radius:8px;
@@ -968,9 +1010,45 @@ nav {
   }
 
   .cards-feedback {
-     display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px;
   }
+
+  /*  */
+
+  .contatos {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto; /* importante */
+        padding: 40px 20px;
+    }
+
+    .header-contatos {
+        height: auto;
+        padding: 40px 0;
+        justify-content: center;
+    }
+
+    .description-contatos {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .description-contatos li {
+        margin-bottom: 30px;
+    }
+
+    .nosconte {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .formulario-contato {
+        width: 100%;
+        height: auto;
+    }
 
 }
